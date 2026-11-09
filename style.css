@@ -1,0 +1,44 @@
+/* 1. Pealkirjade kujundus */
+h1 { font-family: Georgia, serif; font-size: 3rem; line-height: 1; color: #ffb66c; margin: 0.3rem 0 1rem; }
+h2 { font-family: Georgia, serif; color: #ffca92; font-size: 1.25rem; margin: 0.6rem 0 0.4rem; }
+
+/* 2. Sisutekst */
+body { font-family: Arial, sans-serif; color: #eee8df; font-size: 0.9rem; line-height: 1.45; text-align: left; }
+p { margin: 0.5rem 0 0.8rem; }
+a { color: #ffca92; }
+.eyebrow { font-size: 0.7rem; letter-spacing: 0.2em; color: #d7b18d; }
+
+/* 3. Pildi raam ja vari */
+figure { margin: 0.8rem 0; text-align: center; }
+img { display: inline-block; max-width: 100%; width: 196px; height: auto; border: 2px solid #c18452; border-radius: 8px; box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4); }
+
+/* 4. Tabel */
+table { width: 100%; border-collapse: collapse; }
+caption { text-align: left; color: #c6b6a4; font-size: 0.8rem; margin-bottom: 0.3rem; }
+th, td { padding: 0.4rem 0.65rem; text-align: left; border-bottom: 1px solid #574535; }
+th { background-color: #ffb66c; color: #23180f; font-weight: bold; }
+tbody tr:nth-child(even) { background-color: #342a22; }
+
+/* 5. Taust */
+body { background-color: #171411; }
+.kaart { background-color: #26211c; border: 1px solid #574535; border-radius: 12px; padding: 1.1rem; }
+
+/* 6. Kaheveeruline paigutus */
+* { box-sizing: border-box; }
+body { max-width: 1160px; margin: 0 auto; padding: 0.75rem 1.5rem; }
+.veerud { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 1.2rem; }
+.kaart > h2:first-child { margin-top: 0; }
+ul, ol { margin: 0.25rem 0; padding-left: 1.3rem; }
+footer { margin-top: 0.8rem; font-size: 0.75rem; color: #c6b6a4; }
+.nupp { display: inline-block; padding: 0.55rem 0.8rem; background-color: #ffb66c; color: #23180f; border-radius: 6px; text-decoration: none; font-weight: bold; }
+a:focus-visible { outline: 3px solid #fff1ce; outline-offset: 4px; }
+.muusikaleht { max-width: 800px; padding-top: 3rem; }
+@media (max-width: 700px) { .veerud { grid-template-columns: 1fr; } body { padding: 1rem; } h1 { font-size: 3rem; } }
+
+/* Lisaülesanne: CSS-liikumine */
+.nupp { transition: transform 0.2s ease, background-color 0.2s ease; }
+.nupp:hover { transform: translateY(-3px); background-color: #ffd09e; }
+@media (prefers-reduced-motion: reduce) { .nupp { transition: none; } .nupp:hover { transform: none; } }
+/* Kompaktne albumiloend hoiab kogu info töölaual nähtaval. */
+.kaart > ul { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 700px) { .kaart > ul { display: block; } }
